@@ -23,7 +23,7 @@ public class SpringBootCurdOperationController {
 	@GetMapping(value = "/getMessage/{id}")
 	public String getMessage(@PathVariable(value = "id", required = true) String id) {
 
-		if (map.size() >= Integer.valueOf(id)) {
+		if (map.size() >= Integer.valueOf(id) && map.size() != 0) {
 			return map.get(id);
 		}
 
